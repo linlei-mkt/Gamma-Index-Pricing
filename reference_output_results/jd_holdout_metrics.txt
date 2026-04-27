@@ -1,0 +1,4 @@
+Holdout validation (last 6 days)
+train: 8300 obs, test (in-train SKUs): 2085 obs
+R^2 out-of-sample = 0.4364
+RMSE out-of-sample = 0.9856

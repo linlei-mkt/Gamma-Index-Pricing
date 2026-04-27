@@ -1,0 +1,8 @@
+PPC diagnostics
+===============
+
+N obs: 10408
+Posterior draws used: 100
+RMSE = 0.7172
+MAE  = 0.5151
+90% PPI coverage = 36.7%

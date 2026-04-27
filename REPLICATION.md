@@ -77,6 +77,16 @@ The MSOM 2020 Data-Driven Research Challenge (Shen, Tang, Wu, Yuan, Zhou, *MSOM*
 | `JD_sku_data.csv` | \~1 MB, 31,868 SKUs | Yes — for `type` and `brand_ID` |
 | `JD_user_data.csv` | \~18 MB, user demographics | Not used; demographic-conditional extension is noted as future work in §15 |
 
+The largest file `JD_order_data.csv` is shipped compressed as
+`JD_order_data.csv.zip` to fit GitHub's 25 MB upload limit.
+Before running any script, unzip it in place:
+
+```bash
+cd JD_MSOM
+unzip JD_order_data.csv.zip
+rm JD_order_data.csv.zip   # optional cleanup
+cd ..
+```
 The simplest workflow:
 
 ```bash

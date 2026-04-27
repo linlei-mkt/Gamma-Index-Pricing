@@ -1,6 +1,6 @@
 # Replication Guide
 
-Step-by-step protocol for replicating every empirical Table (3–10) and every Figure (1–7) in *Revenue-Constrained Multi-Product Pricing via $\\gamma$-Equalization: A Diagonal Approximation Under MCI Demand*.
+Step-by-step protocol for replicating every empirical Table (3–10) and every Figure (1–7) in *Revenue-Constrained Multi-Product Pricing via $\gamma$-Equalization: A Diagonal Approximation Under MCI Demand*.
 
 The replication needs only Python 3.9+ and the JD MSOM 2020 dataset (included in this repository under `JD_MSOM/`). Total runtime: \~15 minutes for the headline numbers, \~2–3 hours for every Table and Figure.
 

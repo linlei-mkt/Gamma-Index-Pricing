@@ -42,13 +42,7 @@ After Step 2, the median values of `gap_gamma_pct` (\~5.6%) and `gap_unif_pct` (
 ## Citation
 
 ```
-@unpublished{gamma_equalization_2026,
-  author = {Authors blinded for review},
-  title  = {Revenue-Constrained Multi-Product Pricing via $\gamma$-Equalization:
-            A Diagonal Approximation Under MCI Demand},
-  year   = {2026},
-  note   = {Working paper}
-}
+
 ```
 
 ## License

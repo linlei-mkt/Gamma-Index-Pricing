@@ -1,0 +1,7 @@
+MainCodes/*.csv
+MainCodes/*.png
+!MainCodes/jd_hb_posterior_summary.csv  # if you want this committed as cache
+MainCodes/__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/

@@ -77,15 +77,20 @@ The MSOM 2020 Data-Driven Research Challenge (Shen, Tang, Wu, Yuan, Zhou, *MSOM*
 | `JD_sku_data.csv` | \~1 MB, 31,868 SKUs | Yes — for `type` and `brand_ID` |
 | `JD_user_data.csv` | \~18 MB, user demographics | Not used; demographic-conditional extension is noted as future work in §15 |
 
-Set the data path:
+The simplest workflow:
 
-```shell
+```bash
 cd MainCodes
-export JD_DATA_DIR=$(pwd)/../JD_MSOM
+python3 jd_hierarchical_bayes.py     # works without any env-var setup
 ```
 
-If `JD_DATA_DIR` is unset, scripts fall back to a hard-coded default at the top of each file that you can edit.
+Scripts default to `../JD_MSOM` relative to `MainCodes/`, which
+matches the bundled data folder. If you place the JD CSVs
+elsewhere, point `JD_DATA_DIR` at that absolute path:
 
+```bash
+export JD_DATA_DIR=/your/path/to/JD_csvs
+```
 ---
 
 ## 3\. Paper element → script mapping

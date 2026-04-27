@@ -398,7 +398,3 @@ In decreasing order of probability:
 Code: MIT License. The JD MSOM 2020 dataset is distributed under the MSOM challenge terms; see the MSOM challenge website for data-use conditions.
 
 Cite the paper as:
-
-\[Authors blinded for review\]. *Revenue-Constrained Multi-Product Pricing via $\\gamma$-Equalization: A Diagonal Approximation Under MCI Demand.* Working paper, 2026\.
-
-`Gamma_index.pdf` is an earlier companion working paper that introduces the single-product $\\gamma$-index in promotion-allocation settings; it is included for context but is not the present submission.  

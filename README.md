@@ -62,13 +62,7 @@ The paper proceeds from theory (§1–§7) to a JD calibrated illustration (§8)
 ## Citation
 
 ```
-@unpublished{gamma_equalization_2026,
-  author = {Authors blinded for review},
-  title  = {Revenue-Constrained Multi-Product Pricing via $\gamma$-Equalization:
-            A Diagonal Approximation Under MCI Demand},
-  year   = {2026},
-  note   = {Working paper}
-}
+
 ```
 
 ## License

@@ -380,4 +380,4 @@ Code: MIT License. The JD MSOM 2020 dataset is distributed under the MSOM challe
 
 Cite the paper as:
 
-\[Authors blinded for review\]. *Revenue-Constrained Multi-Product Pricing via $\\gamma$-Equalization: A Diagonal Approximation Under MCI Demand.* Working paper, 2026\.  
+\[\]. ** , \.  

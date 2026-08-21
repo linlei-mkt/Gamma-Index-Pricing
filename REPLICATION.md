@@ -59,23 +59,24 @@ robustness summary (§9), managerial implications (§10), discussion
 calibrated Monte Carlo, and the conduct-assumption analysis for
 marginal-cost inversion are in **Appendices L, M, and N**
 respectively.
-Appendices A–K contain the proofs and the contraction condition
+Appendices A–L contain the proofs and the contraction condition (Appendix I proves uniqueness and global optimality of the scalar-FI rule, Proposition 5)
 for the $\gamma$-update map.
 
 | Paper element | Content | Replication script |
 |---|---|---|
 | §7 (Table 3, Figures 1–2) | JD calibrated illustration with HB-MCI demand | `jd_hierarchical_bayes.py`, `jd_experiment.py` |
 | §8 (Table 4, Figure 3) | GMV-constrained pricing on JD (15% floor) | `jd_gmv_constrained.py` |
-| App L.1 (Table 5, Figure 4) | GMV-floor sensitivity ($\phi \in \{1.05,\ldots,1.25\}$) | `jd_gmv_floor_sensitivity.py` |
-| App L.2 (Table 6) | Hausman-IV from cross-DC variation | `jd_hausman_iv.py` |
-| App L.3 (Table 7, Figure 5) | Wall-clock scalability at $n \in \{500,\ldots,50{,}000\}$ | `scalability_demo.py` |
-| App L.4 (Table 8) | $M_{\mathrm{mult}} \times c/\bar p$ sensitivity grid | `jd_hb_sensitivity.py` |
-| App L.5 | Mixed-logit Monte Carlo robustness (narrative only) | `mixed_logit_robustness.py` |
-| App L.6 (Figure 6) | Empirical local operator-norm contraction diagnostic | `jd_cbar_diagnostic.py` |
-| App L.7 (Figures 7–8) | Posterior predictive check, holdout, uncertainty propagation | `jd_hb_validation.py` |
-| App L.8 (Table 9, Figure 9) | Top-$N$ catalog-truncation robustness | `jd_topn_sensitivity.py` |
-| App L.9 (Figures 10–11) | $\gamma^\star$-misspecification sweep + outcome-based calibration | `jd_gamma_robustness.py` |
-| App L.10 (Figure 12) | Misspecified cross-price information regret; scalar-FI benchmark | `regret_misspec.py`, `scalar_fi_benchmark.py` |
+| App M.1 (Table 5, Figure 4) | GMV-floor sensitivity ($\phi \in \{1.05,\ldots,1.25\}$) | `jd_gmv_floor_sensitivity.py` |
+| App M.2 (Table 6) | Hausman-IV from cross-DC variation | `jd_hausman_iv.py` |
+| App M.3 (Table 7, Figure 5) | Wall-clock scalability at $n \in \{500,\ldots,50{,}000\}$ | `scalability_demo.py` |
+| App M.4 (Table 8) | $M_{\mathrm{mult}} \times c/\bar p$ sensitivity grid | `jd_hb_sensitivity.py` |
+| App M.5 | Mixed-logit Monte Carlo robustness (narrative only) | `mixed_logit_robustness.py` |
+| App M.6 (Figure 6) | Empirical local operator-norm contraction diagnostic | `jd_cbar_diagnostic.py` |
+| App M.7 (Figures 7–8) | Conditional-mean residual check, holdout, uncertainty propagation | `jd_hb_validation.py` |
+| App M.8 (Table 9, Figure 9) | Top-$N$ catalog-truncation robustness | `jd_topn_sensitivity.py` |
+| App M.9 (Figures 10–11) | $\gamma^\star$-misspecification sweep + outcome-based calibration | `jd_gamma_robustness.py` |
+| App M.10 (Figure 12) | Misspecified cross-price information regret; scalar-FI benchmark | `regret_misspec.py`, `scalar_fi_benchmark.py` |
+| App I (Prop. 5(ii)–(iii)) | Numerical check: Φ′(A*)=0, unique root, global optimality | `prop5_uniqueness_check.py` |
 | App M (Table 10) | Calibrated Monte Carlo + HKMR (1995) illustration | `empirical_gamma.py` |
 | App N | Conduct assumptions in marginal-cost inversion | (analytical, no script) |
 
@@ -110,3 +111,5 @@ version drift.
 Code: MIT License. The JD MSOM 2020 dataset is distributed under
 the MSOM challenge terms; see the
 [challenge page](https://connect.informs.org/msom/events/datadriven-call).
+
+> Round-6 note (2026-08-21): the validation bands in App M.7 are conditional-mean credible bands (parameter draws only, no ε draws) — renamed accordingly in the paper. All pricing pipelines floor β at max(β̂, 1.2) (43/415 point estimates floored; median 34 per posterior draw within a daily market), keeping every solve inside Proposition 5's domain. The constrained experiments impose no price boxes; at the scalar-FI optimum 254/10,408 day–product pairs price below marginal cost (min p/c = 0.84), while the γ-implementation keeps p ≥ 1.0001c (binding on 636/10,408 pairs). See `prop5_uniqueness_check.py` for the Prop 5(ii)–(iii) numerical check.

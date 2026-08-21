@@ -222,7 +222,7 @@ if len(ms_ok) > 0:
     ax.loglog(ms_ok['n'], ms_ok['ms_ms'], 's-', color='tab:red', label="MS2011 (O(n²))", linewidth=2, markersize=8)
 newton_ok = df.dropna(subset=['newton_ms'])
 if len(newton_ok) > 0:
-    ax.loglog(newton_ok['n'], newton_ok['newton_ms'], '^-', color='tab:green', label="Newton BN (O(n³))", linewidth=2, markersize=8)
+    ax.loglog(newton_ok['n'], newton_ok['newton_ms'], '^-', color='tab:green', label="Newton FI (O(n³))", linewidth=2, markersize=8)
 
 # Mark infeasibility
 for _, r in df.iterrows():

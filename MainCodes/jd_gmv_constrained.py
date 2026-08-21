@@ -390,8 +390,8 @@ def main():
     # Profit vs revenue scatter, with R_target line
     fig, ax = plt.subplots(figsize=(7, 5))
     for col_r, col_p, label, marker, color in [
-        ("R_unc_BN", "pi_unc_BN", "unconstrained BN (ignores floor)", "x", "grey"),
-        ("R_cbn", "pi_cbn", "constrained BN (ground truth)", "o", "tab:red"),
+        ("R_unc_BN", "pi_unc_BN", "unconstrained FI (ignores floor)", "x", "grey"),
+        ("R_cbn", "pi_cbn", "constrained FI (ground truth)", "o", "tab:red"),
         ("R_gamma0", "pi_gamma0", "γ at γ*=0 (classical Lerner)", "s", "tab:green"),
         ("R_uniform_tuned", "pi_uniform_tuned", "uniform markup (tuned)", "^", "tab:orange"),
         ("R_gamma_tuned", "pi_gamma_tuned", "γ with γ* tuned", "D", "tab:blue"),

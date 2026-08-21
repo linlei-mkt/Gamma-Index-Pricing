@@ -230,7 +230,7 @@ for mkt in markets:
     p_hat, it_hat, conv_hat = gamma_iteration(p0, c, alpha, beta, M, g_hat)
     pi_hat = total_profit(p_hat, c, alpha, beta, M)
 
-    # true multiplier from constrained BN (theoretical comparison object)
+    # true multiplier from constrained FI optimum (theoretical comparison object)
     p_cbn, mu_star = constrained_bn_floor(p0, c, alpha, beta, M, R_target)
     L = lambda p: (total_profit(p, c, alpha, beta, M)
                    + mu_star * total_revenue(p, alpha, beta, M))
@@ -343,7 +343,7 @@ ax.plot(xs, coef[0] * np.abs(xs) + coef[1] * xs ** 2, "k--", alpha=0.6,
 ax.axhline(0, color="grey", lw=0.5)
 ax.axvline(0, color="grey", lw=0.5)
 ax.set_xlabel(r"$\Delta\gamma = \gamma - \hat\gamma^\star$")
-ax.set_ylabel("excess loss (% of constrained-BN Lagrangian)")
+ax.set_ylabel("excess loss (% of constrained-FI Lagrangian)")
 ax.set_title(f"(b) Excess loss $\\approx$ quadratic "
              f"(floor: {floor_med:.2f}%)", fontsize=11)
 ax.legend(fontsize=8, loc="upper center")

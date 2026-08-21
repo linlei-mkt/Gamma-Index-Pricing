@@ -451,7 +451,7 @@ def main():
         ax.plot(xs, c_fit * xs ** 2 * 100, "b--", alpha=0.5,
                 label=fr"γ gap ≈ {c_fit:.2f}·ebar²")
     ax.set_xlabel(r"$\bar e$")
-    ax.set_ylabel("profit gap to BN (%)")
+    ax.set_ylabel("profit gap to FI (%)")
     ax.set_title("Pricing comparison under hierarchical-Bayes β̂")
     ax.legend()
     plt.tight_layout()
